@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #ecf0fe;
+  transition: 0.5s;
+}
+
+.calculator {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  padding: 20px;
+  border-radius: 30px;
+  justify-content: center;
+  background-color: #ecf0fe;
+  box-shadow: inset 5px 5px 12px rgba(255, 255, 255, 0.3), 5px 5px 12px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+
+}
+
+.con-active {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  padding: 20px;
+  border-radius: 30px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 5px 5px 12px rgba(0, 0, 0, 0.2),
+    5px 5px 5px rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+
+}
+
+.input {
+  grid-column: span 4;
+  padding: 20px;
+  height: 80px;
+  width: 280px;
+  background-color: #ecf0fe;
+  box-shadow: inset -5px -5px 5px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 12px rgba(0, 0, 0, 0.15);
+
+  border: none;
+  border-radius: 30px;
+  color: rgba(70, 70, 70);
+  font-size: 40px;
+  text-align: right;
+  margin: auto;
+  margin: 50px 0px;
+  transition: 0.5s;
+
+}
+
+.in-active {
+  grid-column: span 4;
+  padding: 20px;
+  height: 80px;
+  width: 280px;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset -5px -5px 12px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+
+  border: none;
+  border-radius: 30px;
+  color: #ecf0fe;
+  font-size: 40px;
+  text-align: right;
+  margin: auto;
+  margin: 50px 0px;
+  transition: 0.5s;
+
+}
+
+
+.button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: rgba(70, 70, 70);
+  border: none;
+  background-color: #ecf0fe;
+  box-shadow: -5px -5px 12px rgba(255, 255, 255, 0.1), 5px 5px 10px rgba(0, 0, 0, 0.15);
+
+  text-align: center;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+
+.button:hover {
+  background-color: #ecf0fe;
+  box-shadow: -5px 5px 12px rgba(255, 255, 255, 0.1), 5px -5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.active {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #ecf0fe;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: -5px -5px 12px rgba(0, 0, 0, 0.15),
+    5px 5px 10px rgba(255, 255, 255, 0.1);
+
+  text-align: center;
+  margin: 8px;
+  cursor: pointer;
+  transition: 0.5s;
+
+}
+.active:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: -5px 5px 12px rgba(0, 0, 0, 0.15),
+    5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+  width: 145px;
+  border-radius: 30px;
+}
+
+.label {
+  width: 100px;
+  height: 40px;
+  background-color: gray;
+  position: absolute;
+  border-radius: 20px;
+  margin-top: 50px;
+}
+
+.input2 {
+  visibility: hidden;
+}
+
+.circle {
+  height: 34px;
+  width: 34px;
+  position: absolute;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  background-color: white;
+  animation: toggleOff 0.5s linear forwards;
+}
+
+.input2:checked + .label {
+  background-color: white;
+}
+
+.input2:checked + .label .circle {
+  background-color: gray;
+  animation: toggleOn 0.5s linear forwards;
+}
+
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(60px);
+  }
+}
+@keyframes toggleOff {
+  0% {
+    transform: translateX(40px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width:600px) {
+    .container {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ecf0fe;
+        transition: 0.5s;
+        padding-bottom: 50px;
+      }
+
+      .calculator{
+        margin-top: 20px;
+      }
+      .con-active{
+        margin-top: 20px;
+      }
+
+      .toggle{
+        /* margin-bottom: 10px; */
+      }
+    
+}

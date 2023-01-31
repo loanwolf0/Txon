@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do App</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="name-filter">
+        <h1>To Do List</h1>
+        <select name="select" class="select"> 
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="inCompleted">Incompleted</option>
+        </select>
+      </div>
+      <div class="input-container">
+        <input
+          type="text"
+          autofocus
+          id="text-input"
+          maxlength="40"
+          placeholder="What's in your mind..."
+        />
+        <button class="add">
+          <i class="fa fa-add"></i>
+        </button>
+      </div>
+
+      <div class="todos-container">
+        <!-- <div class="todo-container">
+          <p id="text">gym</p>
+          <button class="edit-button">
+            <i class="fa fa-edit" ></i>
+          </button>
+          <button class="delete-button">
+            <i class="fa fa-trash" ></i>
+          </button>
+        </div> -->
+      </div>
+    </div>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
